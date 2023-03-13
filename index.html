@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="hello">
+		<div class="content card">
+			<div class="popup js-popup">
+				<div class="popup__window">
+					<input
+						class="popup__input js-popup__input"
+						type="text"
+						placeholder="Edite Your task"
+					/>
+					<button class="popup__close js-popup__close">close</button>
+					<button class="popup__accept js-popup__accept">accept</button>
+				</div>
+			</div>
+			<div class="wrapper js-themeChange">
+				<!-- <div class="start-page"></div> -->
+				<div class="page">
+					<header class="header">
+						<div class="header__title">Write your task</div>
+						<div class="header__form">
+							<div class="color__change js-color__change">Color</div>
+
+							<div class="header__form-error js-error-form">
+								<div class="header__form-error-text">write your task first</div>
+								<button class="header__form-error-close" id="js-error">
+									x
+								</button>
+							</div>
+							<input
+								class="header__form-inpute js-inpute-form"
+								type="text"
+								placeholder="Here..."
+							/>
+							<button class="header__form-btn" id="js-input-btn">Pin</button>
+						</div>
+					</header>
+					<div class="descr">
+						<div class="descr__line">
+							<div class="descr__count js-descr__count">Today:</div>
+							<!-- <div class="descr__done">Done:</div> -->
+						</div>
+					</div>
+					<!-- <div class="tasks__list-unactive">Add your first task</div> -->
+					<div class="info js-info">Add your first task</div>
+					<div class="tasks">
+						<div class="tasks__list js-tasks__list" id="js-addTask">
+							<!-- <div class="tasks__active" data-blockId="${taskId}" id="active">
+								<img
+									class="tasks__active-img"
+									src="/rufus-beige-gres-szkl-mat-40x40-g1.jpg"
+									alt="img"
+								/>
+
+								<div class="tasks__active-text">
+									${inputText}
+									<div class="task__counter">start</div>
+									<div class="task__counter-timer js-task__counter-timer">00:00t</div>
+									<div class="task__stop ">stop</div>
+									<div class="task__resume">resume</div>
+								</div>
+								<div class="tasks__active-check">
+									<button
+										class="js-active-edite-btn js-editeBtn"
+										data-iddd="${taskId}"
+										id="editeBtn"
+									>
+										Edit
+									</button>
+									<input class="tasks__active-check-check" type="checkbox" />
+									<button class="tasks__active-check-btn" data-iddd="${taskId}">
+										Delete
+									</button>
+								</div>
+							</div> -->
+						</div>
+					</div>
+					<div class="clear">
+						<div class="clear__btn js-clear__btn">
+							<button class="clear__btn-btn clearAll">Clear All</button>
+						</div>
+						<div class="clear__checked js-clear__checked">
+							<button class="clear__checked-btn clearChecked js-clearChecked">
+								Clear Done
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="popup">
+			<div class="popup__window">
+				<input class="popup__input" type="text" placeholder="Edite Your task" />
+				<button class="popup__close">close</button>
+				<button class="popup__accept">accept</button>
+			</div> -->
+		</div>
+		<script src="/sc.js"></script>
+	</body>
+</html>
