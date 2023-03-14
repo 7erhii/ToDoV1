@@ -69,8 +69,6 @@ editeTaskParrent.addEventListener('click', changeStatus);
 // когда карточка div вмонитрованна в страницу добавляем ивент на удаление
 createTask.addEventListener('click', deliteOneTask); //клик >add>delite 1 task
 
-// editeTaskParrent.addEventListener('click', timeCounter);
-
 //_____________CLICKS END______
 
 function uuidv4() {
@@ -100,7 +98,6 @@ function addNewTask(e) {
 	} else {
 		const taskId = uuidv4();
 		const inputText = tasksForm.value;
-		// const currentTask = tasksForm.time;
 		const taskObj = {
 			id: taskId,
 			value: inputText,
@@ -417,137 +414,9 @@ function clearCheckedTasks() {
 	}
 }
 
-// editeTaskParrent.addEventListener('click', timeCounter);
-
-// function timeCounter(e) {
-// 	const clickedElement = e.target;
-// 	const timerApear = clickedElement
-// 		.closest('.js-tasks__active')
-// 		.querySelector('.js-task__counter-timer');
-// 	const stopButton = clickedElement
-// 		.closest('.js-tasks__active')
-// 		.querySelector('.js-task__stop');
-
-// 	if (clickedElement.classList.contains('js-task__counter')) {
-// 		timerApear.style.display = 'flex';
-// 		stopButton.style.zIndex = '1';
-// 		stopButton.style.display = 'flex';
-
-// 		let startTime = new Date().getTime();
-// 		let timeElapsed = 0;
-// 		let timerInterval = setInterval(() => {
-// 			timeElapsed = new Date().getTime() - startTime;
-// 			let minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
-// 			let seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
-// 			let formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${
-// 				seconds < 10 ? '0' : ''
-// 			}${seconds}`;
-// 			timerApear.textContent = formattedTime;
-// 		}, 1000);
-
-// 		stopButton.addEventListener('click', () => {
-// 			clearInterval(timerInterval);
-// 			// stopButton.style.zIndex = '0';
-// 			stopTimer(clickedElement);
-// 			// stopButton.style.display = 'none';
-// 		});
-// 	}
-// }
 // ==================SET TIMER==========================================
 
-// function startTimer() {
-// 	const timerDisplay = document.querySelector('.js-task__counter-timer');
-// 	let timeInSeconds = 0;
-// 	let timerInterval;
-
-// 	function updateTimer() {
-// 		timeInSeconds++;
-// 		const minutes = Math.floor(timeInSeconds / 60)
-// 			.toString()
-// 			.padStart(2, '0');
-// 		const seconds = (timeInSeconds % 60).toString().padStart(2, '0');
-// 		timerDisplay.textContent = `${minutes}:${seconds}`;
-// 		const pauseButton = document.querySelector('.js-task__pause');
-// 		pauseButton.style.display = 'flex';
-// 		console.log('helloooo');
-// 		const hideStart = document.querySelector('.task__counter');
-// 		hideStart.style.display = 'none';
-// 	}
-
-// 	function pauseTimer() {
-// 		clearInterval(timerInterval);
-// 		const pauseButton = document.querySelector('.js-task__pause');
-// 		pauseButton.style.background = '#f3eaea';
-// 		pauseButton.classList.add('paused');
-// 		pauseButton.removeEventListener('click', pauseTimer);
-// 		pauseButton.addEventListener('click', resumeTimer);
-// 	}
-
-// 	function resumeTimer() {
-// 		timerInterval = setInterval(updateTimer, 1000);
-// 		const pauseButton = document.querySelector('.js-task__pause');
-// 		pauseButton.style.background =
-// 			'linear-gradient(218deg,rgba(235, 234, 249, 1) 0%,rgba(203, 239, 246, 1) 100%)';
-// 		pauseButton.classList.remove('paused');
-// 		pauseButton.removeEventListener('click', resumeTimer);
-// 		pauseButton.addEventListener('click', pauseTimer);
-// 	}
-
-// 	updateTimer();
-// 	timerInterval = setInterval(updateTimer, 1000);
-
-// 	const pauseButton = document.querySelector('.js-task__pause');
-// 	pauseButton.addEventListener('click', pauseTimer);
-
-// 	const checkBox = document.querySelector('.js-tasks__active-check');
-// 	checkBox.addEventListener('change', (event) => {
-// 		if (event.target.checked) {
-// 			pauseTimer();
-// 		} else {
-// 			resumeTimer();
-// 		}
-// 	});
-// }
-
 const startButton = document.querySelector('.js-task__counter');
-// startButton.addEventListener('click', startTimer);
-
-// editeTaskParrent.addEventListener('click', timeCounter);
-
-// function timeCounter(e) {
-// 	const clickedElement = e.target;
-// 	const timerApear = clickedElement
-// 		.closest('.js-tasks__active')
-// 		.querySelector('.js-task__counter-timer');
-// 	const stopButton = clickedElement
-// 		.closest('.js-tasks__active')
-// 		.querySelector('.js-task__stop');
-
-// 	if (clickedElement.classList.contains('js-task__counter')) {
-// 		timerApear.style.display = 'flex';
-// 		stopButton.style.zIndex = '1';
-// 		stopButton.style.display = 'flex';
-
-// 		let startTime = new Date().getTime();
-// 		let timeElapsed = 0;
-// 		let timerInterval = setInterval(() => {
-// 			timeElapsed = new Date().getTime() - startTime;
-// 			let minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
-// 			let seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
-// 			let formattedTime = `${minutes < 10 ? '0' : ''}${minutes}:${
-// 				seconds < 10 ? '0' : ''
-// 			}${seconds}`;
-// 			timerApear.textContent = formattedTime;
-// 		}, 1000);
-
-// 		stopButton.addEventListener('click', () => {
-// 			clearInterval(timerInterval);
-// 			// stopButton.style.zIndex = '0';
-// 			stopTimer(clickedElement);
-// 			// stopButton.style.display = 'none';
-// 		});
-// 	}
-// }
 
 colorBtn.addEventListener('click', () => {
 	const parrentCards = document.querySelector('.js-tasks__list');
