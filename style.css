@@ -1,13 +1,14 @@
 * {
 	font-family: 'Montserrat', sans-serif;
 }
-html {
-	/* background-color: rgb(64, 64, 64); */
-}
 
 body {
 	position: relative;
 	background-color: rgb(177, 181, 177);
+}
+
+a:active {
+	color: inherit;
 }
 
 .content {
@@ -33,12 +34,22 @@ body {
 }
 
 .tasks__active-check-check {
-	display: flex;
+	/* display: flex;
 	appearance: none;
 	background: linear-gradient(#b6b2b2, #c0b2b2);
 	height: 22px;
 	width: 24px;
 	border-radius: 20%;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-appearance: none;
+	appearance: none;
+	background: linear-gradient(#b6b2b2, #c0b2b2);
+	height: 22px;
+	width: 24px;
+	border-radius: 20%;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -69,9 +80,15 @@ body {
 }
 
 .header {
+	/* background-color: #b0b3ae;
+	border-radius: 8px 8px 8px 8px;
+	margin: 10px 25px 0 25px;
+	box-shadow: 0 10px 10px -7px;
+	border: 0.1px solid black; */
 	background-color: #b0b3ae;
 	border-radius: 8px 8px 8px 8px;
 	margin: 10px 25px 0 25px;
+	-webkit-box-shadow: 0 10px 10px -7px;
 	box-shadow: 0 10px 10px -7px;
 	border: 0.1px solid black;
 }
@@ -80,7 +97,7 @@ body {
 	margin: 0 auto;
 	font-size: 22px;
 
-	background-color: #689b4b;
+	background-color: #677a5d;
 	border-radius: 8px 8px 0 0;
 	border-bottom: 3px solid rgb(255, 249, 85);
 
@@ -90,9 +107,18 @@ body {
 
 .header__form {
 	/* _________________________________ */
-	position: relative;
+	/* position: relative;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	padding-bottom: 10px; */
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
 	justify-content: center;
 	margin-top: 10px;
 	padding-bottom: 10px;
@@ -133,9 +159,6 @@ body {
 	color: rgb(255, 11, 11);
 }
 
-.header__form-error::after {
-}
-
 .header__form-inpute {
 	height: 26px;
 	border: none;
@@ -164,8 +187,6 @@ body {
 	background-color: rgb(203, 238, 201);
 }
 
-.descr {
-}
 .descr__line {
 	margin-top: 20px;
 	padding: 10px;
@@ -176,8 +197,7 @@ body {
 .descr__count {
 	font-size: 16px;
 }
-.descr__done {
-}
+
 .tasks__active {
 	position: relative;
 	padding: 0 8px;
@@ -208,6 +228,10 @@ body {
 	box-shadow: 5px 5px 9px #252424, -5px -5px 9px #555252;
 	border-radius: 12px;
 	color: #fff;
+}
+
+.task__style-dark .task__counter-timer {
+	color: #000;
 }
 
 .task__style-dark-checked {
@@ -316,10 +340,12 @@ body {
 		rgba(235, 234, 249, 1) 0%,
 		rgba(203, 239, 246, 1) 100%
 	);
+	color: #000000;
+	text-decoration: none;
 }
 
 .task__counter-timer {
-	display: none;
+	/* display: none; */
 	position: absolute;
 	bottom: -4px;
 	left: 80px;
@@ -332,6 +358,23 @@ body {
 		rgba(235, 234, 249, 1) 0%,
 		rgba(203, 239, 246, 1) 100%
 	);
+	color: #000;
+}
+
+.task__pause {
+	display: none;
+	position: absolute;
+	bottom: -4px;
+	padding: 0 5.5px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background: #fffafa;
+	background: linear-gradient(
+		218deg,
+		rgba(235, 234, 249, 1) 0%,
+		rgba(203, 239, 246, 1) 100%
+	);
+	/* z-index: -3; */
 }
 
 .tasks__active-check {
@@ -347,22 +390,6 @@ body {
 .tasks__active-check p {
 	margin: 0;
 }
-
-/* .tasks__list-error {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	margin: 0px auto;
-	height: 40px;
-	width: 96%;
-	background-color: rgb(249, 204, 204);
-	font-size: 18px;
-	line-height: 40px;
-	justify-content: space-around;
-	border: 1px solid black;
-	border-radius: 6px;
-} */
 
 .clear {
 	display: flex;
@@ -514,21 +541,6 @@ body {
 	background-color: #87ba6a;
 }
 
-.task__stop {
-	position: absolute;
-	bottom: -4px;
-	padding: 0 5.5px;
-	border: 1px solid black;
-	border-radius: 10px;
-	background: #fffafa;
-	background: linear-gradient(
-		218deg,
-		rgba(235, 234, 249, 1) 0%,
-		rgba(203, 239, 246, 1) 100%
-	);
-	z-index: -3;
-}
-
 .task__resume {
 	position: absolute;
 	bottom: -10px;
@@ -573,6 +585,7 @@ body {
 
 .wrapper::before {
 	position: absolute;
+	background-color: #c1c1c1;
 	content: '';
 	width: 104%;
 	height: 102%;
